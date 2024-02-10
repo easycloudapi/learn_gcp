@@ -21,7 +21,7 @@ pip install google-cloud-compute==1.16.0
 gcloud services enable compute.googleapis.com
 
 # # Call the Py file
-python create_vm.py
+python python_client_create_gcp_vm.py
 ```
 """
 
