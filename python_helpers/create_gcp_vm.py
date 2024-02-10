@@ -3,18 +3,22 @@ Ref: https://cloud.google.com/python/docs/reference/compute/latest
 Code Ref: https://cloud.google.com/compute/docs/api/using-libraries
 
 ```shell
--- cd $HOME
+# # Setup Working Folder
+# cd $HOME
 cd ~
-
--- mkdir demo && cd demo
+# mkdir demo && cd demo
 cd demo
 ls -lart
 
--- python -m venv .venv
--- python -m virtualenv .venv
+# # Setup Python Virtual ENV and Install Required Packages
+# python -m venv .venv
+# python -m virtualenv .venv
 source .venv/bin/activate
 pip install google-cloud-compute==1.16.0
--- pip install --upgrade google-cloud-compute
+# pip install --upgrade google-cloud-compute
+
+# # Enable the GCP Compute API
+gcloud services enable compute.googleapis.com
 
 python create_vm.py
 ```
